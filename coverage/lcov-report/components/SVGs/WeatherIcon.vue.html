@@ -1,0 +1,571 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for components/SVGs/WeatherIcon.vue</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">components/SVGs</a> WeatherIcon.vue</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">99.38% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>161/162</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">99.38% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>161/162</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input oninput="onInput()" type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >&lt;template&gt;</span></span>
+  &lt;svg
+    width="19"
+    height="16"
+    viewBox="0 0 19 16"
+    :fill="fillColor"
+    xmlns="http://www.w3.org/2000/svg"
+  &gt;
+    &lt;path
+      d="M2.98687 15.9397C1.34385 15.9397 0 14.598 0 12.9551C0 10.937 1.57602 9.96823 3.4156 9.96823C2.89549 7.89878 4.12778 5.76695 6.12578 5.10377C8.17742 4.42287 10.3986 5.44083 11.2335 7.41658C14.446 5.11047 18.8615 7.59741 18.6763 11.4706C18.5558 13.9798 16.4864 15.9533 13.9726 15.9533L2.98679 15.94L2.98687 15.9397Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M9.55468 4.67282C9.51896 4.87379 9.327 5.00988 9.12603 4.97638C8.92284 4.94066 8.78675 4.7487 8.82025 4.54773C9.10379 2.88901 10.5526 1.65686 12.2515 1.65686C14.6089 1.65686 16.2787 3.9495 15.5643 6.19542C15.5018 6.39183 15.2942 6.49898 15.0999 6.43656C14.9035 6.37625 14.7964 6.16649 14.8566 5.97219C15.4146 4.222 14.1199 2.4002 12.2513 2.4002C10.9096 2.4002 9.77785 3.36463 9.55462 4.67281L9.55468 4.67282Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M12.2738 0.000376944C12.0774 -0.00852527 11.8831 0.141032 11.8831 0.366493V0.973724C11.8831 1.18137 12.0483 1.32648 12.2268 1.33984C12.4367 1.35542 12.6175 1.18361 12.6175 0.973724V0.366493C12.6175 0.174539 12.4657 0.0115154 12.2738 0.000376944Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M8.62363 1.50068C8.48743 1.63243 8.46295 1.8668 8.61918 2.02302L9.04783 2.45167C9.20183 2.60567 9.43408 2.58342 9.56794 2.44944C9.7086 2.30879 9.70637 2.07444 9.56572 1.93377L9.13707 1.50512C8.99864 1.36669 8.76429 1.36224 8.62365 1.50067L8.62363 1.50068Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M17.3859 5.11921C17.377 4.93838 17.2297 4.76868 17.0198 4.76868H16.4126C16.1916 4.76868 16.042 4.95618 16.0465 5.1459C16.0509 5.34454 16.2162 5.5031 16.4126 5.5031H17.0198C17.2252 5.5031 17.3971 5.32673 17.3859 5.1191V5.11921Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M15.8767 1.50058C15.7427 1.37328 15.515 1.35325 15.3632 1.50504L14.9346 1.93368C14.7828 2.08546 14.8028 2.31313 14.9301 2.4471C15.0686 2.59444 15.3096 2.59444 15.4525 2.45156L15.8811 2.02291C16.024 1.88003 16.024 1.6389 15.8767 1.50057L15.8767 1.50058Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M0.00713469 15.9859C0.00681169 15.9862 0.00638104 15.9863 0.00584273 15.9863H0.00455078C0.00336649 15.9863 0.00239753 15.9861 0.00153609 15.9855C0.000674791 15.9846 0.000244141 15.9836 0.000244141 15.9825C0.000244141 15.9814 0.000674791 15.9803 0.00153609 15.9794C0.00239739 15.9786 0.00336635 15.9781 0.00455078 15.9781C0.00508909 15.9781 0.00551974 15.9784 0.00584273 15.9786C0.00638104 15.9786 0.00681169 15.9788 0.00713469 15.979V15.9807C0.00681169 15.9805 0.00638104 15.9803 0.00584273 15.9803C0.00551974 15.9801 0.00508909 15.9799 0.00455078 15.9799C0.00390482 15.9799 0.00336649 15.9802 0.00282818 15.9807C0.00250519 15.9811 0.00239753 15.9816 0.00239753 15.9825C0.00239753 15.9833 0.00250519 15.9841 0.00282818 15.9846C0.00336649 15.9849 0.00390482 15.985 0.00455078 15.985H0.00584273C0.00638104 15.9848 0.00681169 15.9845 0.00713469 15.9842V15.9859Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M0.0125402 15.9818H0.0122139C0.0122139 15.9816 0.0120508 15.9814 0.0118876 15.9814C0.0113982 15.9814 0.0110719 15.9817 0.0109088 15.9821V15.9831V15.985H0.00927734V15.9805H0.0109088V15.9814C0.0109088 15.981 0.0109903 15.9808 0.0112351 15.9808C0.0113982 15.9806 0.0117245 15.9805 0.0122139 15.9805H0.0125402V15.9818Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M0.0188104 15.9828V15.9834H0.0152212C0.0153843 15.9837 0.0155474 15.9839 0.0155474 15.9841H0.0165263H0.0175052C0.017913 15.9839 0.0182393 15.9837 0.018484 15.9837V15.9847C0.0182393 15.985 0.017913 15.985 0.0175052 15.985H0.0165263C0.015629 15.985 0.0149764 15.9849 0.0145686 15.9844C0.0140791 15.984 0.013916 15.9834 0.013916 15.9828C0.013916 15.9821 0.0140792 15.9816 0.0145686 15.9811C0.0149764 15.9807 0.015629 15.9805 0.0165263 15.9805C0.0171789 15.9805 0.0176683 15.9807 0.0181577 15.9811C0.0185656 15.9816 0.0188103 15.9821 0.0188103 15.9828H0.0188104ZM0.017179 15.9824C0.017179 15.982 0.0170158 15.9818 0.0168527 15.9818C0.0168527 15.9816 0.0166896 15.9814 0.0165264 15.9814C0.016037 15.9814 0.0157107 15.9816 0.0155475 15.9818C0.0155475 15.9818 0.0153844 15.982 0.0152213 15.9824H0.017179Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M0.0240124 15.9831C0.0237677 15.9831 0.023523 15.9832 0.0233598 15.9834C0.0231151 15.9834 0.0230336 15.9836 0.0230336 15.9837C0.0230336 15.9837 0.0231151 15.9839 0.0233598 15.9841H0.0236861H0.024665C0.0248281 15.9839 0.0249913 15.9837 0.0249913 15.9834V15.9831H0.0240124ZM0.0262965 15.9824V15.985H0.0249914V15.9844C0.0247467 15.9846 0.0244204 15.9849 0.0240125 15.985H0.0233599C0.0228705 15.985 0.0224627 15.985 0.0220548 15.9847C0.0218101 15.9845 0.0217285 15.9842 0.0217285 15.9837C0.0217285 15.9831 0.0218101 15.9827 0.0220548 15.9824C0.0224627 15.9823 0.0231152 15.9821 0.0240125 15.9821H0.0249914C0.0249914 15.9819 0.0248282 15.9818 0.0246651 15.9818C0.0244204 15.9816 0.0240941 15.9814 0.0236862 15.9814H0.0227074C0.0224627 15.9814 0.0222179 15.9816 0.0220548 15.9818V15.9808C0.0224627 15.9806 0.0227889 15.9805 0.0230337 15.9805H0.0240125C0.0248282 15.9805 0.0253992 15.9807 0.0256439 15.9811C0.0260518 15.9814 0.0262965 15.9818 0.0262965 15.9824Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M0.0310676 15.9786V15.9799H0.0323585V15.9809H0.0310676V15.9828V15.9835H0.0317131H0.0323585V15.9844H0.0310676C0.0305836 15.9844 0.0301802 15.9844 0.0297768 15.9841C0.0295347 15.984 0.029454 15.9835 0.029454 15.9828V15.9809H0.0288086V15.9799H0.029454V15.9786H0.0310676Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M0.0395624 15.9828V15.9834H0.0359731C0.0361363 15.9837 0.0362994 15.9839 0.0362994 15.9841H0.0372783H0.0382571C0.038665 15.9839 0.0389912 15.9837 0.039236 15.9837V15.9847C0.0389912 15.985 0.038665 15.985 0.0382571 15.985H0.0372783C0.036381 15.985 0.0357284 15.9849 0.0353205 15.9844C0.0348311 15.984 0.034668 15.9834 0.034668 15.9828C0.034668 15.9821 0.0348311 15.9816 0.0353205 15.9811C0.0357284 15.9807 0.036381 15.9805 0.0372783 15.9805C0.0379308 15.9805 0.0384202 15.9807 0.0389097 15.9811C0.0393175 15.9816 0.0395622 15.9821 0.0395622 15.9828H0.0395624ZM0.0379309 15.9824C0.0379309 15.982 0.0377678 15.9818 0.0376046 15.9818C0.0376046 15.9816 0.0374415 15.9814 0.0372784 15.9814C0.0367889 15.9814 0.0364626 15.9816 0.0362995 15.9818C0.0362995 15.9818 0.0361364 15.982 0.0359732 15.9824H0.0379309Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M0.0465428 15.9812V15.9781H0.0486961V15.9863H0.0465428V15.9855C0.0465428 15.9858 0.0462198 15.9861 0.0456815 15.9863H0.0448202C0.0439589 15.9863 0.0432053 15.9861 0.042667 15.9855C0.042344 15.9849 0.0422363 15.9842 0.0422363 15.9833C0.0422363 15.9825 0.042344 15.9818 0.042667 15.9812C0.0432053 15.9806 0.0439589 15.9803 0.0448202 15.9803C0.0450356 15.9803 0.0453585 15.9805 0.0456815 15.9807C0.0462198 15.9807 0.0465428 15.9809 0.0465428 15.9812ZM0.0456815 15.985C0.0458969 15.985 0.0461122 15.9849 0.0461122 15.9846C0.0463275 15.9844 0.0465428 15.984 0.0465428 15.9833C0.0465428 15.9828 0.0463275 15.9823 0.0461122 15.982C0.0461122 15.9818 0.0458969 15.9816 0.0456815 15.9816C0.0450356 15.9816 0.0446049 15.9818 0.0443896 15.982C0.0440666 15.9823 0.0439589 15.9828 0.0439589 15.9833C0.0439589 15.984 0.0440666 15.9844 0.0443896 15.9846C0.0446049 15.9849 0.0450356 15.985 0.0456815 15.985Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M0.0574579 15.985C0.0579962 15.985 0.0583192 15.9849 0.0583192 15.9846C0.0585346 15.9844 0.0587499 15.984 0.0587499 15.9833C0.0587499 15.9828 0.0585346 15.9823 0.0583192 15.982C0.0583192 15.9818 0.0579962 15.9816 0.0574579 15.9816C0.0571349 15.9816 0.056812 15.9818 0.0565966 15.982V15.9833V15.9846C0.056812 15.9849 0.0571349 15.985 0.0574579 15.985ZM0.0565966 15.9812C0.0565966 15.9809 0.0567043 15.9807 0.0570273 15.9807C0.0575656 15.9805 0.0579962 15.9803 0.0583192 15.9803C0.0591805 15.9803 0.0597188 15.9806 0.0600418 15.9812C0.0605801 15.9818 0.0609031 15.9825 0.0609031 15.9833C0.0609031 15.9842 0.0605801 15.9849 0.0600418 15.9855C0.0597188 15.9861 0.0591805 15.9863 0.0583192 15.9863H0.0570273C0.0567043 15.9861 0.0565966 15.9858 0.0565966 15.9855V15.9863H0.0544434V15.9781H0.0565966V15.9812Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M0.0617676 15.9805H0.0639208L0.0652128 15.9848L0.0665047 15.9805H0.068658L0.0660741 15.9869C0.0657511 15.9878 0.0654281 15.9882 0.0652128 15.9882C0.0648898 15.9884 0.0644591 15.9887 0.0639208 15.9887H0.0626289V15.9874H0.0634902H0.0639208C0.0641362 15.9874 0.0643515 15.9871 0.0643515 15.9869V15.9865L0.0617676 15.9805Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M0.0757702 15.9831C0.0755255 15.9831 0.0752808 15.9832 0.0751177 15.9834C0.0748729 15.9834 0.0747914 15.9836 0.0747914 15.9837C0.0747914 15.9837 0.0748729 15.9839 0.0751177 15.9841H0.0754439H0.0764228C0.0765859 15.9839 0.0767491 15.9837 0.0767491 15.9834V15.9831H0.0757702ZM0.0780543 15.9824V15.985H0.0767492V15.9844C0.0765045 15.9846 0.0761782 15.9849 0.0757703 15.985H0.0751178C0.0746283 15.985 0.0742205 15.985 0.0738126 15.9847C0.0735679 15.9845 0.0734863 15.9842 0.0734863 15.9837C0.0734863 15.9831 0.0735679 15.9827 0.0738126 15.9824C0.0742205 15.9823 0.074873 15.9821 0.0757703 15.9821H0.0767492C0.0767492 15.9819 0.076586 15.9818 0.0764229 15.9818C0.0761782 15.9816 0.0758519 15.9814 0.075444 15.9814H0.0744652C0.0742205 15.9814 0.0739757 15.9816 0.0738126 15.9818V15.9808C0.0742205 15.9806 0.0745468 15.9805 0.0747915 15.9805H0.0757703C0.076586 15.9805 0.077157 15.9807 0.0774018 15.9811C0.0778096 15.9814 0.0780543 15.9818 0.0780543 15.9824Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M0.0803223 15.9805H0.0824755L0.0837675 15.9848L0.0850594 15.9805H0.0872127L0.0846288 15.9869C0.0843058 15.9878 0.0839828 15.9882 0.0837675 15.9882C0.0834445 15.9884 0.0830138 15.9887 0.0824755 15.9887H0.0811836V15.9874H0.0820449H0.0824755C0.0826908 15.9874 0.0829062 15.9871 0.0829062 15.9869V15.9865L0.0803223 15.9805Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M0.088623 15.9834V15.9805H0.0899282V15.9808V15.9821V15.9828V15.9837H0.0902545V15.9841H0.090907C0.0910702 15.9841 0.0912333 15.984 0.0912333 15.9837C0.0913965 15.9836 0.0915596 15.9832 0.0915596 15.9828V15.9805H0.093191V15.985H0.0915596V15.9844C0.0913149 15.9846 0.0910702 15.9849 0.090907 15.985H0.0902545C0.0896019 15.985 0.0891125 15.985 0.0889493 15.9847C0.0887046 15.9843 0.088623 15.9839 0.088623 15.9834Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M0.00473716 15.9894V15.9907H0.00387585H0.00301455V15.9915H0.00473716V15.9928H0.00301455V15.9976H0.00129195V15.9928H0V15.9915H0.00129195C0.00129195 15.9907 0.00139961 15.9901 0.0017226 15.9898C0.00193793 15.9896 0.0025839 15.9894 0.0034452 15.9894H0.00473716Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M0.00912223 15.9928H0.00879594C0.00879594 15.9926 0.00863279 15.9924 0.00846966 15.9924C0.00798022 15.9924 0.00765396 15.9927 0.0074908 15.9931V15.9941V15.996H0.00585938V15.9915H0.0074908V15.9924C0.0074908 15.992 0.00757237 15.9918 0.00781709 15.9918C0.00798022 15.9916 0.00830653 15.9915 0.00879594 15.9915H0.00912223V15.9928Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M0.0135966 15.9924C0.0131072 15.9924 0.0127809 15.9926 0.0126178 15.9928C0.012373 15.993 0.0122915 15.9933 0.0122915 15.9937C0.0122915 15.9942 0.012373 15.9946 0.0126178 15.9947C0.0127809 15.995 0.0131072 15.995 0.0135966 15.995C0.0137598 15.995 0.0140045 15.995 0.0142492 15.9947C0.0144123 15.9946 0.0145755 15.9942 0.0145755 15.9937C0.0145755 15.9933 0.0144123 15.993 0.0142492 15.9928C0.0140045 15.9926 0.0137598 15.9924 0.0135966 15.9924ZM0.0135966 15.9915C0.0142492 15.9915 0.0147386 15.9917 0.015228 15.9921C0.0156359 15.9926 0.0158806 15.9931 0.0158806 15.9937C0.0158806 15.9944 0.0156359 15.995 0.015228 15.9954C0.0147386 15.9959 0.0142492 15.996 0.0135966 15.996C0.0126993 15.996 0.0120468 15.9959 0.0116389 15.9954C0.0111495 15.995 0.0109863 15.9944 0.0109863 15.9937C0.0109863 15.9931 0.0111495 15.9926 0.0116389 15.9921C0.0120468 15.9917 0.0126993 15.9915 0.0135966 15.9915Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M0.0248294 15.9928C0.025052 15.9922 0.0253858 15.9919 0.0257196 15.9919C0.0259422 15.9917 0.026276 15.9915 0.0266099 15.9915C0.0275001 15.9915 0.0280565 15.9918 0.0283903 15.9923C0.0286129 15.9927 0.0288354 15.9932 0.0288354 15.9941V15.9977H0.027055V15.9946V15.9941C0.027055 15.9939 0.0268324 15.9936 0.0266099 15.9932C0.0266099 15.993 0.0263873 15.9928 0.0261647 15.9928C0.0258309 15.9928 0.0254971 15.993 0.0252745 15.9932C0.0249407 15.9936 0.0248294 15.994 0.0248294 15.9946V15.9977H0.023049V15.9946C0.023049 15.994 0.0228264 15.9936 0.0226039 15.9932C0.0226039 15.993 0.0223813 15.9928 0.0221587 15.9928C0.0218249 15.9928 0.0214911 15.993 0.0212685 15.9932V15.9946V15.9977H0.019043V15.9915H0.0212685V15.9923C0.0212685 15.9921 0.0213798 15.9919 0.0217136 15.9919C0.0219362 15.9917 0.0223813 15.9915 0.023049 15.9915C0.0232715 15.9915 0.0236053 15.9917 0.0239392 15.9919C0.0241618 15.9919 0.0244956 15.9922 0.0248294 15.9928Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M0.0357063 15.9896V15.9909H0.0369972V15.9919H0.0357063V15.9938V15.9945H0.0363518H0.0369972V15.9954H0.0357063C0.0352222 15.9954 0.0348188 15.9954 0.0344154 15.9951C0.0341734 15.9949 0.0340927 15.9945 0.0340927 15.9938V15.9919H0.0334473V15.9909H0.0340927V15.9896H0.0357063Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M0.0455799 15.9941V15.9976H0.0434266V15.995V15.9941V15.9933H0.042996C0.042996 15.993 0.0427807 15.9928 0.0425653 15.9928C0.0422423 15.9928 0.0419194 15.993 0.041704 15.9933V15.9945V15.9976H0.0395508V15.9894H0.041704V15.9924C0.041704 15.9922 0.0418117 15.992 0.0421347 15.992C0.042673 15.9917 0.0431036 15.9915 0.0434266 15.9915C0.0439649 15.9915 0.0443956 15.9919 0.0447186 15.9924C0.0452569 15.9927 0.0455799 15.9933 0.0455799 15.9941V15.9941Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M0.0520135 15.9937V15.9944H0.0484243C0.0485874 15.9946 0.0487506 15.9949 0.0487506 15.995H0.0497294H0.0507083C0.0511161 15.9949 0.0514424 15.9947 0.0516871 15.9947V15.9957C0.0514424 15.9959 0.0511161 15.996 0.0507083 15.996H0.0497294C0.0488321 15.996 0.0481796 15.9959 0.0477717 15.9954C0.0472823 15.995 0.0471191 15.9944 0.0471191 15.9937C0.0471191 15.9931 0.0472823 15.9926 0.0477717 15.9921C0.0481796 15.9917 0.0488321 15.9915 0.0497294 15.9915C0.050382 15.9915 0.0508714 15.9917 0.0513609 15.9921C0.0517687 15.9926 0.0520134 15.9931 0.0520134 15.9937H0.0520135ZM0.0503821 15.9934C0.0503821 15.993 0.0502189 15.9928 0.0500558 15.9928C0.0500558 15.9926 0.0498927 15.9924 0.0497295 15.9924C0.0492401 15.9924 0.0489138 15.9926 0.0487507 15.9928C0.0487507 15.9928 0.0485875 15.993 0.0484244 15.9934H0.0503821Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M0.0593262 15.9896H0.0609398L0.0631989 15.9935V15.9896H0.0648126V15.9954H0.0628762L0.0609399 15.9912V15.9954H0.0593263L0.0593262 15.9896Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M0.0707255 15.9924C0.0702361 15.9924 0.0699098 15.9926 0.0697467 15.9928C0.0695019 15.993 0.0694204 15.9933 0.0694204 15.9937C0.0694204 15.9942 0.0695019 15.9946 0.0697467 15.9947C0.0699098 15.995 0.0702361 15.995 0.0707255 15.995C0.0708887 15.995 0.0711334 15.995 0.0713781 15.9947C0.0715412 15.9946 0.0717044 15.9942 0.0717044 15.9937C0.0717044 15.9933 0.0715412 15.993 0.0713781 15.9928C0.0711334 15.9926 0.0708887 15.9924 0.0707255 15.9924ZM0.0707255 15.9915C0.0713781 15.9915 0.0718675 15.9917 0.0723569 15.9921C0.0727648 15.9926 0.0730095 15.9931 0.0730095 15.9937C0.0730095 15.9944 0.0727648 15.995 0.0723569 15.9954C0.0718675 15.9959 0.0713781 15.996 0.0707255 15.996C0.0698282 15.996 0.0691757 15.9959 0.0687678 15.9954C0.0682784 15.995 0.0681152 15.9944 0.0681152 15.9937C0.0681152 15.9931 0.0682784 15.9926 0.0687678 15.9921C0.0691757 15.9917 0.0698282 15.9915 0.0707255 15.9915Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M0.0761719 15.9944V15.9915H0.077477V15.9918V15.9931V15.9937V15.9947H0.0778033V15.995H0.0784559C0.078619 15.995 0.0787822 15.995 0.0787822 15.9947C0.0789453 15.9946 0.0791084 15.9942 0.0791084 15.9937V15.9915H0.0807399V15.996H0.0791084V15.9954C0.0788637 15.9956 0.078619 15.9959 0.0784559 15.996H0.0778033C0.0771507 15.996 0.0766613 15.9959 0.0764982 15.9957C0.0762534 15.9953 0.0761719 15.9949 0.0761719 15.9944Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M0.0885524 15.9934V15.996H0.0869209V15.9941V15.9934V15.9928H0.0865947C0.0865947 15.9926 0.0864315 15.9924 0.0862684 15.9924C0.0860237 15.9924 0.085779 15.9926 0.0856158 15.9928V15.9937V15.996H0.0839844V15.9915H0.0856158V15.9921C0.0856158 15.9919 0.0856974 15.9918 0.0859421 15.9918C0.0863499 15.9916 0.0866762 15.9915 0.0869209 15.9915C0.0873288 15.9915 0.0876551 15.9917 0.0878998 15.9921C0.0883077 15.9924 0.0885524 15.9928 0.0885524 15.9934V15.9934Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M0.0959473 15.9896H0.098529C0.0993358 15.9896 0.0999006 15.9899 0.100143 15.9903C0.100546 15.9905 0.100788 15.9909 0.100788 15.9916C0.100788 15.9922 0.100546 15.9928 0.100143 15.9932C0.0999006 15.9934 0.0993358 15.9935 0.098529 15.9935H0.0975609V15.9954H0.0959473V15.9896ZM0.0975609 15.9906V15.9922H0.098529H0.0991745C0.0993358 15.992 0.0994972 15.9918 0.0994972 15.9916C0.0994972 15.9912 0.0993358 15.9909 0.0991745 15.9909C0.0989324 15.9908 0.0986904 15.9906 0.098529 15.9906H0.0975609Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M0.107511 15.9928H0.107185C0.107185 15.9926 0.107021 15.9924 0.106858 15.9924C0.106369 15.9924 0.106043 15.9927 0.105879 15.9931V15.9941V15.996H0.104248V15.9915H0.105879V15.9924C0.105879 15.992 0.105961 15.9918 0.106206 15.9918C0.106369 15.9916 0.106695 15.9915 0.107185 15.9915H0.107511V15.9928Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M0.111741 15.9924C0.111252 15.9924 0.110925 15.9926 0.110762 15.9928C0.110518 15.993 0.110436 15.9933 0.110436 15.9937C0.110436 15.9942 0.110518 15.9946 0.110762 15.9947C0.110925 15.995 0.111252 15.995 0.111741 15.995C0.111904 15.995 0.112149 15.995 0.112394 15.9947C0.112557 15.9946 0.11272 15.9942 0.11272 15.9937C0.11272 15.9933 0.112557 15.993 0.112394 15.9928C0.112149 15.9926 0.111904 15.9924 0.111741 15.9924ZM0.111741 15.9915C0.112394 15.9915 0.112883 15.9917 0.113373 15.9921C0.11378 15.9926 0.114025 15.9931 0.114025 15.9937C0.114025 15.9944 0.11378 15.995 0.113373 15.9954C0.112883 15.9959 0.112394 15.996 0.111741 15.996C0.110844 15.996 0.110191 15.9959 0.109783 15.9954C0.109294 15.995 0.109131 15.9944 0.109131 15.9937C0.109131 15.9931 0.109294 15.9926 0.109783 15.9921C0.110191 15.9917 0.110844 15.9915 0.111741 15.9915Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M0.117302 15.9916H0.119528V15.9978C0.119528 15.9984 0.119194 15.9988 0.118637 15.9992C0.118304 15.9997 0.117747 16.0001 0.116857 16.0001H0.115967V15.9987H0.116412H0.116857C0.11708 15.9987 0.117302 15.9984 0.117302 15.9978V15.9916ZM0.117302 15.9894H0.119528V15.9907H0.117302V15.9894Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M0.125744 15.9937V15.9944H0.122155C0.122318 15.9946 0.122481 15.9949 0.122481 15.995H0.12346H0.124439C0.124847 15.9949 0.125173 15.9947 0.125418 15.9947V15.9957C0.125173 15.9959 0.124847 15.996 0.124439 15.996H0.12346C0.122563 15.996 0.12191 15.9959 0.121502 15.9954C0.121013 15.995 0.12085 15.9944 0.12085 15.9937C0.12085 15.9931 0.121013 15.9926 0.121502 15.9921C0.12191 15.9917 0.122563 15.9915 0.12346 15.9915C0.124112 15.9915 0.124602 15.9917 0.125091 15.9921C0.125499 15.9926 0.125744 15.9931 0.125744 15.9937H0.125744ZM0.124113 15.9934C0.124113 15.993 0.123949 15.9928 0.123786 15.9928C0.123786 15.9926 0.123623 15.9924 0.12346 15.9924C0.122971 15.9924 0.122644 15.9926 0.122481 15.9928C0.122481 15.9928 0.122318 15.993 0.122155 15.9934H0.124113Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M0.132333 15.9918V15.9928H0.131681C0.131681 15.9926 0.131436 15.9924 0.131028 15.9924C0.130784 15.9924 0.130457 15.9926 0.130049 15.9928C0.129805 15.993 0.129723 15.9933 0.129723 15.9937C0.129723 15.9942 0.129805 15.9946 0.130049 15.9947C0.130457 15.995 0.130784 15.995 0.131028 15.995H0.132007C0.13217 15.9949 0.132333 15.9947 0.132333 15.9947V15.996H0.131681H0.131028C0.130131 15.996 0.129478 15.9959 0.129071 15.9954C0.128581 15.995 0.128418 15.9944 0.128418 15.9937C0.128418 15.9931 0.128581 15.9926 0.129071 15.9921C0.129478 15.9917 0.130131 15.9915 0.131028 15.9915H0.131681C0.131844 15.9915 0.132089 15.9916 0.132333 15.9918Z"
+      :fill="fillColor"
+    /&gt;
+    &lt;path
+      d="M0.136781 15.9896V15.9909H0.138071V15.9919H0.136781V15.9938V15.9945H0.137426H0.138071V15.9954H0.136781C0.136296 15.9954 0.135893 15.9954 0.13549 15.9951C0.135248 15.9949 0.135167 15.9945 0.135167 15.9938V15.9919H0.134521V15.9909H0.135167V15.9896H0.136781Z"
+      :fill="fillColor"
+    /&gt;
+  &lt;/svg&gt;
+&lt;/template&gt;
+&nbsp;
+&lt;script&gt;
+export default {
+  props: {
+    fillColor: { type: String, default: "var(--gray-200)" }
+  }
+};
+&lt;/script&gt;
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2022-11-03T05:47:09.527Z
+            </div>
+        <script src="../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
+    </body>
+</html>
+    
